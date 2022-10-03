@@ -1,8 +1,12 @@
 import React from "react";
+import Cake from '../images/Birthday cake.png'
 
 function Event(){
     return(
-        <div> Event </div>
+        <img src={Cake}/>
+
+     
+
     )
 }
 

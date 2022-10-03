@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import LandingPage from "./Components/LandingPage";
+import Create from "./Components/Create";
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+      <BrowserRouter>
+      <Routes>
+      <Route index element={<LandingPage />} />
+      <Route path="create" element={<Create />} />
+      </Routes>
+
+      </BrowserRouter>
+      </div>
   );
 }
 
 export default App;
+
+// <div className="App">
+//   <div className="ImageBox">
+//     <Landing />
+//   </div>
+
+//   <div className="TextBox">
+//     <h1>Imagine if Snapchat had events.</h1>
+//     <p>
+//       Easily host and share events with your friends across any social
+//       media.
+//     </p>
+//     <nav>
+//       <Link to="/create"> &#127881; Create my event</Link>
+//     </nav>
+//   </div>
+//   <Routes>
+//     <Route path="/create">
+//       <Create />
+//     </Route>
+//   </Routes>
+// </div>
